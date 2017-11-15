@@ -39,7 +39,7 @@ var schema = snapSJOT.convert(data);
 console.log(JSON.stringify(schema, null, 2));
 ```
 
-This creates the following SJOT schema:
+This creates and displays the following SJOT schema:
 
 ```js
 {
@@ -62,6 +62,18 @@ This creates the following SJOT schema:
 ```
 
 where `@root` specifies that the root type of the JSON data is an array of objects, `@final` means that the object is not extensible (remove if extensibility is desired), the `"string"` type matches any string, the `"number"` type matches any number and the `"boolean"` type matches `true` or `false`.  These types can be further restricted as specified by [SJOT schema](http://sjot.org) syntax.  The `[[ "string", "number" ]]` with `"string"` and `"number"` types is a type choice that matches any string or number.  An object property name ending in a `?` is optional.
+
+To validate JSON with SJOT schemas, use the SJOT validator by installing npm package [sjot](https://www.npmjs.com/package/sjot):
+
+    npm install sjot
+
+and use `SJOT.valid(data, "@root", schema)` to validate `data` against a SJOT `schema`:
+
+```js
+var SJOT = require("sjot");
+if (SJOT.valid(data, "@root", schema))
+  ... // OK: data validated against schema
+```
 
 How to contribute?
 ------------------
