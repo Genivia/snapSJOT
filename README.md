@@ -6,7 +6,7 @@
 snapSJOT 
 ========
 
-Creates SJOT schemas from JSON data, a companion module for SJOT schemas [sjot.org](http://sjot.org) GitHub repository [Genivia/SJOT](https://github.com/Genivia/SJOT).
+Creates SJOT schemas from JSON data, a companion module for SJOT schemas [sjot.org](http://sjot.org) npm package [sjot.js](https://www.npmjs.com/package/sjot) GitHub repository [Genivia/SJOT](https://github.com/Genivia/SJOT).
 
 Installation
 ------------
