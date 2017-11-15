@@ -72,7 +72,8 @@ We love feedback and contributions to this project.  Please read
 Changelog
 ---------
 
-- Nov 14, 2017: sjot.js 1.3.17 added snapSJOT snapsjot.js schema creator to convert JSON data to SJOT schemas, improvements
+- Nov 14, 2017: snapsjot 1.3.17 added snapSJOT snapsjot.js schema creator to convert JSON data to SJOT schemas
+- Nov 15, 2017: snapsjot 1.3.18 fixed index.js
 
 [logo-url]: https://www.genivia.com/images/sjot-logo.png
 [sjot-url]: http://sjot.org
