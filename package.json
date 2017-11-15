@@ -1,6 +1,6 @@
 {
   "name": "snapsjot",
-  "version": "1.3.17",
+  "version": "1.3.18",
   "description": "Companion module for SJOT schemas, creates a SJOT schema from JSON data to efficiently validate JSON data streams.",
   "main": "snapsjot.js",
   "scripts": {
