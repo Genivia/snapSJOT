@@ -61,7 +61,7 @@ This creates the following SJOT schema:
 }
 ```
 
-where `@root` specifies that the root type of the JSON data is an array of objects, `@final` means that the object is not extensible (remove if extensibility is desired), the `"string"` type matches any string, the `"number"` type matches any number and the `"boolean"` type matches `true` or `false`.  These types can be further restricted as specified by [SJOT schemas](http://sjot.org).  The `[[ "string", "number" ]]` with `"string"` and `"number"` types is a type choice that matches any string or number.  An object property name ending in a `?` is optional.
+where `@root` specifies that the root type of the JSON data is an array of objects, `@final` means that the object is not extensible (remove if extensibility is desired), the `"string"` type matches any string, the `"number"` type matches any number and the `"boolean"` type matches `true` or `false`.  These types can be further restricted as specified by [SJOT schema](http://sjot.org) syntax.  The `[[ "string", "number" ]]` with `"string"` and `"number"` types is a type choice that matches any string or number.  An object property name ending in a `?` is optional.
 
 How to contribute?
 ------------------
