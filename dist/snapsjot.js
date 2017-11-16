@@ -2,7 +2,7 @@
  * Create SJOT schema from JSON data
  *
  * @module      snapsjot
- * @version     1.3.18
+ * @version     1.4.0
  * @class       snapSJOT
  * @author      Robert van Engelen, engelen@genivia.com
  * @copyright   Robert van Engelen, Genivia Inc, 2016-2017. All Rights Reserved.

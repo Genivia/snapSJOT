@@ -1,7 +1,7 @@
 {
   "name": "snapsjot",
   "author": "Robert van Engelen and Chris Moutsos",
-  "version": "1.3.18",
+  "version": "1.4.0",
   "description": "Companion module for SJOT schemas, creates a SJOT schema from JSON data to efficiently validate JSON data streams.",
   "license": "BSD-3-Clause",
   "main": "snapsjot.js",
