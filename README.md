@@ -6,7 +6,10 @@
 snapSJOT 
 ========
 
-Creates SJOT schemas from JSON data, a companion module for SJOT schemas [sjot.org](http://sjot.org) npm package [sjot.js](https://www.npmjs.com/package/sjot) GitHub repository [Genivia/SJOT](https://github.com/Genivia/SJOT).
+Creates SJOT schemas from JSON data, a companion module for SJOT schemas
+[sjot.org](http://sjot.org) npm package
+[sjot.js](https://www.npmjs.com/package/sjot) GitHub repository
+[Genivia/SJOT](https://github.com/Genivia/SJOT).
 
 Installation
 ------------
@@ -16,7 +19,8 @@ Installation
 How to snapSJOT JSON
 --------------------
 
-`snapSJOT.convert(data)` returns a SJOT schema for the given JSON data.  Use snapSJOT with node.js as follows:
+`snapSJOT.convert(data)` returns a SJOT schema for the given JSON or JS value.
+Use snapSJOT with node.js as follows:
 
 ```js
 var snapSJOT = require("snapsjot");
@@ -61,18 +65,42 @@ This creates and displays the following SJOT schema:
 }
 ```
 
-where `@root` specifies that the root type of the JSON data is an array of objects, `@final` means that the object is not extensible (remove if extensibility is desired), the `"string"` type matches any string, the `"number"` type matches any number and the `"boolean"` type matches `true` or `false`.  These types can be further restricted as specified by [SJOT schema](http://sjot.org) syntax.  The `[[ "string", "number" ]]` with `"string"` and `"number"` types is a type choice that matches any string or number.  An object property name ending in a `?` is optional.
+where `@root` specifies that the root type of the JSON data is an array of
+objects, `@final` means that the object is not extensible (remove if
+    extensibility is desired), the `"string"` type matches any string, the
+`"number"` type matches any number and the `"boolean"` type matches `true` or
+`false`.  These types can be further restricted as specified by [SJOT
+schema](http://sjot.org) syntax.  The `[[ "string", "number" ]]` with
+`"string"` and `"number"` types is a type choice that matches any string or
+number.  An object property name ending in a `?` is optional.
 
-To validate JSON with SJOT schemas, use the SJOT validator by installing npm package [sjot](https://www.npmjs.com/package/sjot):
+To validate JSON or type check JS values with SJOT schemas, use the SJOT
+validator by installing npm package [sjot](https://www.npmjs.com/package/sjot):
 
     npm install sjot
 
-and use `SJOT.valid(data, "@root", schema)` to validate `data` against a SJOT `schema`:
+and use `SJOT.valid(data, "@root", schema)` to validate `data` against a SJOT
+`schema`:
 
 ```js
 var SJOT = require("sjot");
+
+var schema = ...; // SJOT schema (e.g. generated with snapSJOT)
+
+var data = ...;   // some data to validate/type check
+
 if (SJOT.valid(data, "@root", schema))
   ... // OK: data validated against schema
+```
+
+Because snapSJOT generates only one root type, you can simply pass the root
+type to `SJOT.valid()` as follows:
+
+```js
+var type = schema["@root"]; // just use the SJOT root type
+
+if (SJOT.valid(data, type))
+  ... // OK: data validated
 ```
 
 How to contribute?
