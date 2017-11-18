@@ -1,7 +1,7 @@
 {
   "name": "snapsjot",
   "author": "Robert van Engelen and Chris Moutsos",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "Companion module for SJOT schemas (npm package sjot), creates a SJOT schema from JSON data to efficiently validate and type-check JSON data streams.",
   "license": "BSD-3-Clause",
   "main": "snapsjot.js",
