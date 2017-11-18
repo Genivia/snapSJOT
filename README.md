@@ -11,6 +11,9 @@ Creates SJOT schemas from JSON data, a companion module for SJOT schemas
 [sjot.js](https://www.npmjs.com/package/sjot) GitHub repository
 [Genivia/SJOT](https://github.com/Genivia/SJOT).
 
+[Live demo](https://www.genivia.com/get-sjot.html#demo) SJOT validator, schema
+converters and snapSJOT creator.
+
 Installation
 ------------
 
@@ -87,20 +90,20 @@ var SJOT = require("sjot");
 
 var schema = ...; // SJOT schema (e.g. generated with snapSJOT)
 
-var data = ...;   // some data to validate/type check
+var data = ...;   // some data to validate (or type check)
 
 if (SJOT.valid(data, "@root", schema))
   ... // OK: data validated against schema
 ```
 
 Because snapSJOT generates only one root type, you can simply pass the root
-type to `SJOT.valid()` as follows:
+type to `SJOT.valid()` to type-check the data as follows:
 
 ```js
 var type = schema["@root"]; // just use the SJOT root type
 
 if (SJOT.valid(data, type))
-  ... // OK: data validated
+  ... // OK: data type-checked
 ```
 
 How to contribute?
@@ -115,6 +118,7 @@ Changelog
 - Nov 14, 2017: snapsjot 1.3.17 added snapSJOT snapsjot.js schema creator to convert JSON data to SJOT schemas
 - Nov 15, 2017: snapsjot 1.3.18 fixed index.js
 - Nov 16, 2017: snapsjot 1.4.0  updates
+- Nov 18, 2017: snapsjot 1.4.1  minor updates
 
 [logo-url]: https://www.genivia.com/images/sjot-logo.png
 [sjot-url]: http://sjot.org
