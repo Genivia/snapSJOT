@@ -124,7 +124,7 @@ Changelog
 [sjot-url]: http://sjot.org
 [npm-image]: https://badge.fury.io/js/snapsjot.svg
 [npm-url]: https://www.npmjs.com/package/snapsjot
-[travis-image]: https://travis-ci.org/Genivia/snapSJOT.svg?branch=master
-[travis-url]: https://travis-ci.org/Genivia/snapSJOT
+[travis-image]: https://travis-ci.com/Genivia/snapSJOT.svg?branch=master
+[travis-url]: https://travis-ci.com/Genivia/snapSJOT
 [bsd-3-image]: https://img.shields.io/badge/license-BSD%203--Clause-blue.svg
 [bsd-3-url]: https://opensource.org/licenses/BSD-3-Clause
